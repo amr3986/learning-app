@@ -39,8 +39,8 @@ public class ThirdActivity3 extends AppCompatActivity {
         Qusno = (TextView)findViewById(R.id.texNu);
         countV = (TextView)findViewById(R.id.textime);
         progress = (ProgressBar)findViewById(R.id.Bar2);
-        Qusno.setText("3/5");
-        progress.setMax(5);
+        Qusno.setText("3/8");
+        progress.setMax(8);
         progress.setProgress(QNo);
         img.setImageResource(R.drawable.ita);
         starV.setText(starNo);

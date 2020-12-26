@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".FinalActivity"></activity>
+        <activity android:name=".lastActivity" />
+        <activity android:name=".seventhActivity7" />
+        <activity android:name=".sixActivity_6" />
         <activity android:name=".FifthActivity5" />
         <activity android:name=".forthActivity4" />
         <activity android:name=".ThirdActivity3" />

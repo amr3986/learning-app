@@ -1,41 +1,47 @@
 package com.example.funlearning;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    int QNo = 0;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class lastActivity extends AppCompatActivity {
+    int QNo;
     TextView starV;
-    TextView countV;
-    TextView QusV;
+    TextView Qusno;
     Button but;
-    CharSequence starNo = "0";
+    TextView countV;
+    CharSequence starNo;
     ProgressBar progress;
+    ImageView img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_last);
+        Intent call = getIntent();
+        starNo = call.getCharSequenceExtra("str");
+        QNo = call.getIntExtra("pr",0);
         starV = (TextView)findViewById(R.id.texstar);
+        img = (ImageView)findViewById(R.id.imgV);
+        but = (Button)findViewById(R.id.but1);
+        Qusno = (TextView)findViewById(R.id.texNu);
         countV = (TextView)findViewById(R.id.textime);
-        but = (Button)findViewById(R.id.but2);
-        QusV = (TextView)findViewById(R.id.texNu);
         progress = (ProgressBar)findViewById(R.id.Bar2);
-        QusV.setText("1/8");
+        Qusno.setText("8/8");
         progress.setMax(8);
         progress.setProgress(QNo);
+        img.setImageResource(R.drawable.stephen);
+        starV.setText(starNo);
+
 
         new CountDownTimer(10000, 1000) {
 
@@ -52,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
 
+
+
     public void incorrect(View view){
         int i = Integer.parseInt(starNo.toString());
         i-=1;
@@ -65,25 +73,25 @@ public class MainActivity extends AppCompatActivity {
         int i = Integer.parseInt(starNo.toString());
         i+=7;
         starNo = String.valueOf(i);
-        String text = "Correct: Sir Isaac Newton was an English mathematician and mathematician and physicist who lived from 1642-1727.";
+        String text = "Correct: He died on 14 March 2018 (aged 76)\n" +
+                "Cambridge, England";
 
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
         starV.setText(starNo);
 
-        final Intent goSecond = new Intent();
-        goSecond.setClass(this, SecondActivity2.class);
-        goSecond.putExtra("star",starNo);
-        goSecond.putExtra("pro",QNo);
-
-
+        final Intent Final = new Intent();
+        Final.setClass(this,FinalActivity.class);
+        Final.putExtra("stv",starNo);
         progress.postDelayed(new Runnable() {
 
             @Override
             public void run() {
-                startActivity(goSecond);
+                startActivity(Final);
             }
 
         }, 3000); // 5000ms delay
+
+
 
     }
 

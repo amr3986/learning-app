@@ -23,7 +23,7 @@
         android:id="@+id/but0"
         android:layout_width="164dp"
         android:layout_height="50dp"
-        android:background="#277da1"
+        android:background="@drawable/circle_shape"
         android:onClick="start"
         android:text="Start"
         android:textColor="#FFFFFF"

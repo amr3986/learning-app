@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,8 +36,8 @@ public class FifthActivity5 extends AppCompatActivity {
         Qusno = (TextView)findViewById(R.id.texNu);
         countV = (TextView)findViewById(R.id.textime);
         progress = (ProgressBar)findViewById(R.id.Bar2);
-        Qusno.setText("5/5");
-        progress.setMax(5);
+        Qusno.setText("5/8");
+        progress.setMax(8);
         progress.setProgress(QNo);
         img.setImageResource(R.drawable.tit);
         starV.setText(starNo);
@@ -81,14 +78,15 @@ public class FifthActivity5 extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
         starV.setText(starNo);
 
-        final Intent Final = new Intent();
-        Final.setClass(this,FinalActivity.class);
-        Final.putExtra("stv",starNo);
+        final Intent go6 = new Intent();
+        go6.setClass(this, sixActivity_6.class);
+        go6.putExtra("str",starNo);
+        go6.putExtra("pr",QNo);
         progress.postDelayed(new Runnable() {
 
             @Override
             public void run() {
-                startActivity(Final);
+                startActivity(go6);
             }
 
         }, 3000); // 5000ms delay

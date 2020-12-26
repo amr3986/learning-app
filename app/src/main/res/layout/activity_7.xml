@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FifthActivity5">
+    tools:context=".seventhActivity7">
 
 
 
@@ -26,7 +26,7 @@
             android:layout_margin="3dp"
             android:background="@drawable/circle_shape"
             android:onClick="wrong"
-            android:text="1922"
+            android:text="1940"
             android:textColor="#FFFFFF"
             android:textSize="22dp" />
 
@@ -36,8 +36,8 @@
             android:layout_height="38dp"
             android:layout_margin="3dp"
             android:background="@drawable/circle_shape"
-            android:onClick="wrong"
-            android:text="1895"
+            android:onClick="correct"
+            android:text="1945"
             android:textColor="#FFFFFF"
             android:textSize="22dp" />
 
@@ -47,8 +47,8 @@
             android:layout_height="38dp"
             android:layout_margin="3dp"
             android:background="@drawable/circle_shape"
-            android:onClick="correct"
-            android:text="1912"
+            android:onClick="wrong"
+            android:text="1948"
             android:textColor="#FFFFFF"
             android:textSize="22dp" />
 
@@ -59,7 +59,7 @@
             android:layout_margin="3dp"
             android:background="@drawable/circle_shape"
             android:onClick="wrong"
-            android:text="1931"
+            android:text="1938"
             android:textColor="#FFFFFF"
             android:textSize="22dp" />
 
@@ -82,7 +82,7 @@
         android:layout_width="305dp"
         android:layout_height="32dp"
         android:gravity="center_horizontal"
-        android:text="In what year Titanic sank ?"
+        android:text="When was the official end of World War2 ?"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="16dp"
@@ -96,8 +96,8 @@
 
     <ImageView
         android:id="@+id/imgV"
-        android:layout_width="316dp"
-        android:layout_height="144dp"
+        android:layout_width="233dp"
+        android:layout_height="145dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,13 +105,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.403"
-        tools:srcCompat="@drawable/tit" />
+        tools:srcCompat="@drawable/war" />
 
     <TextView
         android:id="@+id/texNu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1/5"
+        android:text="1/10"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
